@@ -14,7 +14,12 @@ In order to replicate the study, 5 files are needed:
 
 ### Prerequisites
 
-In order to use the data, the R software is needed. Additionally, the libraries *sem* and *dplyr* must be installed
+In order to use the data, the R software is needed. Additionally, the libraries *sem* and *dplyr* must be installed in R:
+
+```
+install.packages("dplyr")
+install.packages("sem")
+```
 
 ### Checking the results
 
