@@ -1,0 +1,21 @@
+InOut    -> conv_insultos, InOut_badWords, NA
+InOut    -> long_media_debates_com, InOut_depthDebatesCom, NA
+InOut    -> num_conv_likes_otras, InOut_likesOther, NA
+InOut    -> num_conv_likes_com, InOut_likesCom, NA
+InOut    -> num_debates_otra, InOut_debatesOther, NA
+InOut    -> num_debates_com, InOut_debatesCom, NA
+
+In -> num_conv_likes_com, In_likesCom, NA
+In -> num_debates_com, In_debatesCom, NA 
+In -> long_media_debates_com, In_depthDebatesCom,NA
+
+
+Out -> num_conv_likes_otras, Out_likesOther, NA
+Out -> num_debates_otra, Out_debatesOther, NA 
+Out -> long_media_debates_otra, Out_dephDebatesOther, NA
+
+In <-> Out, rho, NA
+
+In <-> In, NA, 1
+Out <-> Out, NA, 1
+InOut <-> InOut, NA, 1

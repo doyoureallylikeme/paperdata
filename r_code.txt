@@ -1,0 +1,14 @@
+library(sem)
+library(dplyr)
+
+data <- read.csv("data_lv.csv")
+
+
+data<-select(data,conv_insultos,long_media_debates_com, num_conv_likes_otras,num_conv_likes_com,num_debates_otra,num_debates_com,long_media_debates_otra)
+opt <- options(fit.indices = c("GFI", "AGFI", "RMSEA", "NFI", "NNFI", "CFI", "RNI", "IFI", "SRMR", "AIC", "AICc", "BIC", "CAIC"))
+
+model <- specifyModel("sem_model.txt")
+covar <- cov(data)
+S <- sem(model, covar, nrow(data))
+summary(S)
+
